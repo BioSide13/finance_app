@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+    <title>Fundria | Track your Finances!</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="heading">
+        <h1>Fundria</h1>
+        <h2>The only finance tracker you will ever need!</h2>
+      </header>
+      <div class="form">
+        <h2><u>Input your details:</u></h2>
+        <br>
+        <div class="incomenbalance">
+          <div class="input-group">
+            <label for="monthlyIncome">Monthly Income:</label>
+            <input id="monthlyIncome" placeholder="Your monthly income" type="number">
+          </div>
+          <div class="input-group">
+            <label for="balance">Balance:</label>
+            <input id="balance" placeholder="Your balance" type="number">
+          </div>
+        </div>
+        <div class="tax-country">
+          <label for="countrySelect">Country you live in (for calculating tax):</label>
+          <select id="countrySelect">
+            <option value="">Select Your Country</option>
+          </select>
+        </div>
+        <button id="tax">Calculate Tax</button>
+        <div class="expenses-section">
+          <h2><u>Monthly Expenses</u></h2>
+          <br>
+          <div class="expenses">
+            <div class="input-group">
+              <label for="livingExpenses">Living Expenses:</label>
+              <input id="livingExpenses" placeholder="Your living expenses" type="number">
+            </div>
+            <div class="input-group">
+              <label for="foodExpenses">Food Expenses (Groceries, etc.):</label>
+              <input id="foodExpenses" placeholder="Your food expenses" type="number">
+            </div>
+            <div class="input-group">
+              <label for="educationExpenses">Education Expenses:</label>
+              <input id="educationExpenses" placeholder="Your education expenses" type="number">
+            </div>
+            <div class="input-group">
+              <label for="entertainmentExpenses">Entertainment Expenses (on average):</label>
+              <input id="entertainmentExpenses" placeholder="Your entertainment expenses" type="number">
+            </div>
+          </div>
+        </div>
+        <button id="analyse">Analyse!</button>
+      </div>
+      <h4>Final Analysis of all your Financial information:</h4>
+      <textarea id="analysisOutput"></textarea>
+    </div>
+  </body>
+</html>
