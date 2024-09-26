@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
  
     function analyseFinances() {
-        let income = parseFloat(document.getElementById('livingExpenses').value) - resultDiv
+        let income = parseFloat(document.getElementById('livingExpenses').value) - taxamo.calcTax({
+            countryCode: countryCode,
+            amount: income
+        })
         let livingExpenses = parseFloat(document.getElementById('livingExpenses').value) || 0;
         let foodExpenses = parseFloat(document.getElementById('foodExpenses').value) || 0;
         let educationExpenses = parseFloat(document.getElementById('educationExpenses').value) || 0;
